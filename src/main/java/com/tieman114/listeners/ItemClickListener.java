@@ -9,6 +9,8 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 
 import com.tieman114.items.Cocaine;
+import com.tieman114.items.CrystalMeth;
+import com.tieman114.items.LiquidCrystalMeth;
 import com.tieman114.items.Weed;
 
 import net.md_5.bungee.api.ChatColor;
@@ -26,12 +28,20 @@ public class ItemClickListener implements Listener{
         ItemStack handheldItem = player.getItemInHand();
 
         if (handheldItem.hasItemMeta() && handheldItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "Weed")) {
-            player.sendMessage("R-Clicked on " + handheldItem.getItemMeta().getDisplayName());
+            player.sendMessage("Consumed " + handheldItem.getItemMeta().getDisplayName());
             Weed.use(player, handheldItem);
         }
         if (handheldItem.hasItemMeta() && handheldItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "Cocaine")) {
-            player.sendMessage("R-Clicked on " + handheldItem.getItemMeta().getDisplayName());
+            player.sendMessage("Consumed " + handheldItem.getItemMeta().getDisplayName());
             Cocaine.use(player, handheldItem);
+        }
+        if (handheldItem.hasItemMeta() && handheldItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "Liquid Crystal Meth")) {
+            player.sendMessage("Consumed " + handheldItem.getItemMeta().getDisplayName());
+            LiquidCrystalMeth.use(player, handheldItem);
+        }
+        if (handheldItem.hasItemMeta() && handheldItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "Crystal Meth")) {
+            player.sendMessage("Consumed " + handheldItem.getItemMeta().getDisplayName());
+            CrystalMeth.use(player, handheldItem);
         }
 
     }

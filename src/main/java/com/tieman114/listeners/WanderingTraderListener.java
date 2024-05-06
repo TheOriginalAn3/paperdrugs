@@ -15,7 +15,7 @@ import com.tieman114.items.CustomRecipes;
 
 public class WanderingTraderListener implements Listener {
 
-    private ItemStack air = null;
+    // private ItemStack air = null;
 
     @EventHandler
     public void onWanderingTraderSpawn(CreatureSpawnEvent event) {
