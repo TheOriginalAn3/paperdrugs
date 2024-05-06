@@ -11,6 +11,7 @@ import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.RecipeChoice;
+import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
@@ -25,6 +26,7 @@ public class CustomRecipes {
     private static ItemStack chemicals = null;
     private static ItemStack liquidCrystalMeth = null;
     private static ItemStack crystalMeth = null;
+    private static ItemStack decorativeAnvil = null;
 
     public static void register(Plugin plugin) {
         // Weed
@@ -65,8 +67,23 @@ public class CustomRecipes {
         // Crystal Meth
         createCrystalMeth();
         FurnaceRecipe crystalMethRecipe = new FurnaceRecipe(new NamespacedKey(plugin, "CrystalMethRecipe"),
-                getCrystalMeth(), new RecipeChoice.ExactChoice(getLiquidCrystalMeth()), 20f, 20*10);
+                getCrystalMeth(), new RecipeChoice.ExactChoice(getLiquidCrystalMeth()), 20f, 20 * 10);
         Bukkit.addRecipe(crystalMethRecipe);
+
+        // Decorative Anvil
+        createDecorativeAnvil(plugin);
+        ShapedRecipe decorativeAnvilRecipe = new ShapedRecipe(new NamespacedKey(plugin, "DecorativeAnvilRecipe"),
+                getDecorativeAnvil());
+        decorativeAnvilRecipe.shape("III",
+                " I ",
+                "III");
+        decorativeAnvilRecipe.setIngredient('I', Material.IRON_INGOT);
+        Bukkit.addRecipe(decorativeAnvilRecipe);
+
+        // Iron from Enderpearls
+        ShapelessRecipe ironFromEnderPearls = new ShapelessRecipe(new NamespacedKey(plugin, "IronFromEnderPearlsRecipe"), new ItemStack(Material.IRON_INGOT));
+        ironFromEnderPearls.addIngredient(4, new ItemStack(Material.ENDER_PEARL));
+        Bukkit.addRecipe(ironFromEnderPearls);
     }
 
     @SuppressWarnings("deprecation")
@@ -114,7 +131,7 @@ public class CustomRecipes {
         if (chemicals == null) {
             chemicals = new ItemStack(Material.WATER_BUCKET);
             ItemMeta chemicalsMeta = chemicals.getItemMeta();
-            chemicalsMeta.setCustomModelData(4);
+            chemicalsMeta.setCustomModelData(2);
             chemicalsMeta.setDisplayName(ChatColor.GOLD + "Chemicals");
             chemicalsMeta.addEnchant(Enchantment.DURABILITY, 1, true);
             chemicalsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -130,7 +147,7 @@ public class CustomRecipes {
         if (liquidCrystalMeth == null) {
             liquidCrystalMeth = new ItemStack(Material.AMETHYST_SHARD);
             ItemMeta liquidCrystalMethMeta = liquidCrystalMeth.getItemMeta();
-            liquidCrystalMethMeta.setCustomModelData(2);
+            liquidCrystalMethMeta.setCustomModelData(3);
             liquidCrystalMethMeta.setDisplayName(ChatColor.GOLD + "Liquid Crystal Meth");
             liquidCrystalMethMeta.addEnchant(Enchantment.DURABILITY, 1, true);
             liquidCrystalMethMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -143,11 +160,24 @@ public class CustomRecipes {
         if (crystalMeth == null) {
             crystalMeth = new ItemStack(Material.AMETHYST_SHARD);
             ItemMeta crystalMethMeta = crystalMeth.getItemMeta();
-            crystalMethMeta.setCustomModelData(3);
+            crystalMethMeta.setCustomModelData(4);
             crystalMethMeta.setDisplayName(ChatColor.GOLD + "Crystal Meth");
             crystalMethMeta.addEnchant(Enchantment.DURABILITY, 1, true);
             crystalMethMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             crystalMeth.setItemMeta(crystalMethMeta);
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    private static void createDecorativeAnvil(Plugin plugin) {
+        if (decorativeAnvil == null) {
+            decorativeAnvil = new ItemStack(Material.DIORITE);
+            ItemMeta decorativeAnvilMeta = decorativeAnvil.getItemMeta();
+            decorativeAnvilMeta.setCustomModelData(5);
+            decorativeAnvilMeta.setDisplayName(ChatColor.AQUA + "Decorative Anvil");
+            decorativeAnvilMeta.addEnchant(Enchantment.DURABILITY, 1, true);
+            decorativeAnvilMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            decorativeAnvil.setItemMeta(decorativeAnvilMeta);
         }
     }
 
@@ -195,6 +225,14 @@ public class CustomRecipes {
         } else
             throw new NullPointerException(
                     "Cannot return value of ItemStack crystalMeth because crystalMeth is NULL");
+    }
+
+    public static ItemStack getDecorativeAnvil() {
+        if (decorativeAnvil != null) {
+            return decorativeAnvil;
+        } else
+            throw new NullPointerException(
+                    "Cannot return value of ItemStack decorativeAnvil because decorativeAnvil is NULL");
     }
 
 }
