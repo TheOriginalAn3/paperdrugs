@@ -7,6 +7,27 @@ website: N/A
 api-version: '1.20'
 commands:
   getWTEgg:
-    description: Adds 1 Wandering Trader Spawn Egg to the players inventory
+    description: Adds 1 Wandering Trader Spawn Egg to the players inventory.
+    usage: /<command>
+    permission: paperdrugs.admincommand
+    permission-message: You do not have permission to use this command.
   getDrugs:
     description: Adds 16 of everything that has to do with drugs
+    usage: /<command>
+    permission: paperdrugs.admincommand
+    permission-message: You do not have permission to use this command.
+  showDebugStatements:
+    description: Player Command. Toggles statements for the player.
+    usage: /<command> <true|false>
+  listDecorativeAnvils:
+    description: Lists all decorative anvil locations
+    usage: /<command>
+  su:
+    description: N/A
+    usage: /<command>
+
+permissions:
+  paperdrugs.admincommand:
+    description: Allows use of admin commands.
+    default: op
+  

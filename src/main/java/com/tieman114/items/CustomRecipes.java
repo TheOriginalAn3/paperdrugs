@@ -75,13 +75,14 @@ public class CustomRecipes {
         ShapedRecipe decorativeAnvilRecipe = new ShapedRecipe(new NamespacedKey(plugin, "DecorativeAnvilRecipe"),
                 getDecorativeAnvil());
         decorativeAnvilRecipe.shape("III",
-                " I ",
-                "III");
+                                    " I ",
+                                    "III");
         decorativeAnvilRecipe.setIngredient('I', Material.IRON_INGOT);
         Bukkit.addRecipe(decorativeAnvilRecipe);
 
         // Iron from Enderpearls
-        ShapelessRecipe ironFromEnderPearls = new ShapelessRecipe(new NamespacedKey(plugin, "IronFromEnderPearlsRecipe"), new ItemStack(Material.IRON_INGOT));
+        ShapelessRecipe ironFromEnderPearls = new ShapelessRecipe(
+                new NamespacedKey(plugin, "IronFromEnderPearlsRecipe"), new ItemStack(Material.IRON_INGOT));
         ironFromEnderPearls.addIngredient(4, new ItemStack(Material.ENDER_PEARL));
         Bukkit.addRecipe(ironFromEnderPearls);
     }
@@ -171,12 +172,15 @@ public class CustomRecipes {
     @SuppressWarnings("deprecation")
     private static void createDecorativeAnvil(Plugin plugin) {
         if (decorativeAnvil == null) {
-            decorativeAnvil = new ItemStack(Material.DIORITE);
+            decorativeAnvil = new ItemStack(Material.ANVIL);
             ItemMeta decorativeAnvilMeta = decorativeAnvil.getItemMeta();
             decorativeAnvilMeta.setCustomModelData(5);
             decorativeAnvilMeta.setDisplayName(ChatColor.AQUA + "Decorative Anvil");
             decorativeAnvilMeta.addEnchant(Enchantment.DURABILITY, 1, true);
             decorativeAnvilMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            List<String> lore = new ArrayList<>();
+            lore.add("Decoration Only - No use");
+            decorativeAnvilMeta.setLore(lore);
             decorativeAnvil.setItemMeta(decorativeAnvilMeta);
         }
     }

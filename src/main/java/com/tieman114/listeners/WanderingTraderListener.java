@@ -27,7 +27,7 @@ public class WanderingTraderListener implements Listener {
         WanderingTrader trader = (WanderingTrader)event.getEntity();
         List<MerchantRecipe> newTrades = new ArrayList<>(trader.getRecipes());
 
-        // Empty "separator" trade
+        // Empty "separator" trade or Midnight Marks
         MerchantRecipe midnightMarks = new MerchantRecipe(CustomRecipes.getMidnightMarks(), 0, 100, true);
         midnightMarks.addIngredient(new ItemStack(Material.EMERALD, 64));
         midnightMarks.shouldIgnoreDiscounts();
@@ -37,6 +37,11 @@ public class WanderingTraderListener implements Listener {
         MerchantRecipe weed = new MerchantRecipe(CustomRecipes.getWeed().asQuantity(5), 7);
         weed.addIngredient(CustomRecipes.getMidnightMarks().asQuantity(5));
         newTrades.add(weed);
+
+        // Crystal Meth Trade
+        MerchantRecipe crystalMeth = new MerchantRecipe(CustomRecipes.getCrystalMeth().asQuantity(5), 7);
+        crystalMeth.addIngredient(CustomRecipes.getMidnightMarks().asQuantity(3));
+        newTrades.add(crystalMeth);
 
         // Cocaein Trade
         MerchantRecipe cocaine = new MerchantRecipe(CustomRecipes.getCocaine().asQuantity(2), 1);
