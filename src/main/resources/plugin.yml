@@ -1,18 +1,12 @@
 name: PaperDrugs
-version: 0.1
+version: 1.0.0
 main: com.tieman114.PaperDrugs
-description: A plugin that adds drugs and other things to Minecraft.
-author: Tieman114
+description: A plugin adding drugs dor our private mc server
+author: TieMan114
 website: N/A
 api-version: '1.20'
-commands: 
-  menu:
-    description: huh
-
-permissions:
-  paperdrugs.admin:
-    description: Allows the player to use all PaperDrugs commands.
-    default: op
-  paperdrugs.use:
-    description: Allows the player to use all PaperDrugs items.
-    default: true
+commands:
+  getWTEgg:
+    description: Adds 1 Wandering Trader Spawn Egg to the players inventory
+  getDrugs:
+    description: Adds 16 of everything that has to do with drugs

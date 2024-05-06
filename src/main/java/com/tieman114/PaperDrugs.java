@@ -2,28 +2,36 @@ package com.tieman114;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.tieman114.commands.MenuCommand;
+import com.tieman114.commands.GetDrugsCommand;
+import com.tieman114.commands.GetWTraderSpawnEggCommand;
 import com.tieman114.items.CustomRecipes;
 import com.tieman114.listeners.InventoryListener;
 import com.tieman114.listeners.ItemClickListener;
+import com.tieman114.listeners.WanderingTraderListener;
 
-public class PaperDrugs extends JavaPlugin{
+public class PaperDrugs extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().info("PaperDrugs has been enabled!");
+        getServer().getLogger().info("PaperDrugs enabled!");
+
         getServer().getPluginManager().registerEvents(new ItemClickListener(), this);
         getServer().getPluginManager().registerEvents(new InventoryListener(), this);
-
-        getCommand("menu").setExecutor(new MenuCommand());
-        //getCommand("weed").setExecutor(new WeedCommand());
-
+        
+        registerCommands();
+        
         //PaperDrugsSettings.getInstance().load();
         CustomRecipes.register(this);
+        getServer().getPluginManager().registerEvents(new WanderingTraderListener(), this);
     }
+    // @EventHandler
+    // public void onDisable() {
+    //     Bukkit.getServer().getLogger().info("PaperDrugs disabled");
+    // }
 
-    @Override
-    public void onDisable() {
-        getLogger().info("PaperDrugs has been disabled!");
+    void registerCommands() {
+        getCommand("getWTEgg").setExecutor(new GetWTraderSpawnEggCommand());
+        getCommand("getDrugs").setExecutor(new GetDrugsCommand());
+        //getCommand("weed").setExecutor(new WeedCommand());
     }
 }

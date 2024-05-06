@@ -6,8 +6,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import net.kyori.adventure.sound.Sound;
-import net.kyori.adventure.sound.Sound.Type;
 import net.md_5.bungee.api.ChatColor;
 
 public class Cocaine {
@@ -22,7 +20,7 @@ public class Cocaine {
         player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1200, 4));
         player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1200, 1));
         player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1200, 1));
-        player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 300, 1));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 2, 2));
 
         int ammount = handheldItem.getAmount();
         if (ammount > 1) {
@@ -32,6 +30,9 @@ public class Cocaine {
         }
         
         player.updateInventory();
+        
+        
+
     }
 
 }
