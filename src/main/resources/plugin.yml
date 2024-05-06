@@ -1,11 +1,13 @@
 name: PaperDrugs
 version: 0.1
-main: com.tieman114.paperdrugs.PaperDrugs
+main: com.tieman114.PaperDrugs
 description: A plugin that adds drugs and other things to Minecraft.
 author: Tieman114
 website: N/A
 api-version: '1.20'
 commands: 
+  menu:
+    description: huh
 
 permissions:
   paperdrugs.admin:
