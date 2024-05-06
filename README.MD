@@ -57,33 +57,33 @@ No license. Use however you want, I dont care.
 
 ## 💡Features
 **Entities:**
-- [ ] Changed Wandering Trader to sell drugs.
-- [ ] Custom Villager with custom trades.
+- [X] Changed Wandering Trader to sell drugs.
+- [X] Custom Villager with custom trades.
 
 **Custom Items:**
-- [ ] Cocaine - Drug
-- [ ] Meth - Drug
-- [ ] Liquid Meth - Drug, Crafting Item
-- [ ] Chemicals - Crafting Item
-- [ ] Weed - Drug
+- [X] Cocaine - Drug
+- [X] Meth - Drug
+- [X] Liquid Meth - Drug, Crafting Item
+- [X] Chemicals - Crafting Item
+- [X] Weed - Drug
 
 **Custom Recipes:**
-- [ ] Craft 1 iron_ingot from 4 ender_pearls.
+- [X] Craft 1 iron_ingot from 4 ender_pearls.
 - [ ] Remove/Make smaller item frame hitboxes.
 - [ ] Teleport signs that take you to a biome/location, accesible by water, when clicked on it.
 - [ ] Craft black dye with coal
 - [ ] Granny milk
-- [ ] Decorative Anvil that can't be used and is cheaper to make
+- [X] Decorative Anvil that can't be used and is cheaper to make
 
 **Custom Blocks:**
-- [ ] Decorative Anvil - can't be used
+- [X] Decorative Anvil - can't be used
 
 **Custom Commands**
-- [ ] **GetDrugs** - gives the player all drug items.
-- [ ] **SpawnCustomVillager "name" "position" "trade1" "trade2"...** - spawns a custom villager with the speciefied trades.
-- [ ] **ShowDebugStatements** - shows debug statements in the players in-game chat.
-- [ ] **ListDecorativeAnvils** - lists all decorative anvil locations.
-- [ ] **GetWTEgg** - gives the player a Wandering Trader Egg
-- [ ] **ChangeVillagerYaw** - changes the nearest villagers yaw. (Usefull if you need to rotate a custom villager)
+- [X] **GetDrugs** - gives the player all drug items.
+- [X] **SpawnCustomVillager "name" "position" "trade1" "trade2"...** - spawns a custom villager with the speciefied trades.
+- [X] **ShowDebugStatements** - shows debug statements in the players in-game chat.
+- [X] **ListDecorativeAnvils** - lists all decorative anvil locations.
+- [X] **GetWTEgg** - gives the player a Wandering Trader Egg
+- [X] **ChangeVillagerYaw** - changes the nearest villagers yaw. (Usefull if you need to rotate a custom villager)
 
 
