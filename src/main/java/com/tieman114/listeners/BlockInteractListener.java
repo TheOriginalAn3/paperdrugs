@@ -39,10 +39,9 @@ public class BlockInteractListener implements Listener {
                 if (AnvilLocationManager.getDecorativeAnvilLocations().contains(block.getLocation())) {
                     event.setCancelled(true);
                     Debugger.sendMessageToPlayer(event.getPlayer(),
-                            ChatColor.GRAY + "This anvil is for decoration only!");
+                        ChatColor.GRAY + "This anvil is for decoration only!");
                 }
             }
-
             // if (block.getState() instanceof TileState) {
             // TileState state = (TileState) block.getState();
             // int isDecorative = state.getPersistentDataContainer().get(new
@@ -61,6 +60,8 @@ public class BlockInteractListener implements Listener {
         } catch (Exception e) {
             Debugger.sendDebugToPlayer(event.getPlayer(), "L-Clicked on <Air>.");
         }
-
     }
 }
+
+
+
