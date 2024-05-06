@@ -1,31 +1,46 @@
 name: PaperDrugs
-version: 1.0.0
+version: 2.0.0
 main: com.tieman114.PaperDrugs
 description: A plugin adding drugs dor our private mc server
 author: TieMan114
 website: N/A
 api-version: '1.20'
 commands:
-  getWTEgg:
+  paperdrugs.getwtegg:
     description: Adds 1 Wandering Trader Spawn Egg to the players inventory.
-    usage: /<command>
+    usage: /paperdrugs.getwtegg
+    aliases: [pd.gw]
     permission: paperdrugs.admincommand
     permission-message: You do not have permission to use this command.
-  getDrugs:
-    description: Adds 16 of everything that has to do with drugs
-    usage: /<command>
+  paperdrugs.getdrugs:
+    description: Adds 16 of everything that has to do with drugs.
+    usage: /paperdrugs.getdrugs
+    aliases: [pd.gd]
     permission: paperdrugs.admincommand
     permission-message: You do not have permission to use this command.
-  showDebugStatements:
+  paperdrugs.showdebugstatements:
     description: Player Command. Toggles statements for the player.
-    usage: /<command> <true|false>
-  listDecorativeAnvils:
-    description: Lists all decorative anvil locations
-    usage: /<command>
-  su:
-    description: N/A
-    usage: /<command>
-
+    usage: /paperdrugs.showdebugstatements <true|false>
+    aliases: [pd.sds]
+  paperdrugs.listdecorativeanvils:
+    description: Lists all decorative anvil locations. --MAY CAUSE LAG--.
+    usage: /paperdrugs.listdecorativeanvils
+    aliases: [pd.lsda]
+  paperdrugs.runcommand:
+    description: Run command.
+    usage: /paperdrugs.runcommand
+    aliases: [pd.rc]
+  paperdrugs.spawncustomvillager:
+    description: Spawns a custom villager at the given location
+    usage: /paperdrugs.spawncustomvillager <name> <x> <y> <z> {[item1, item1Ammount]:[costItem1, costItem1Ammount]}...
+    permission: paperdrugs.admincommand
+    permission-message: You do not have permission to use this command.
+  paperdrugs.changevillageryaw:
+    desctiption: Changes the yaw (look direction in degrees from -180 to 180) of the entity you're looking at.
+    usage: /customvillager.changevillageryaw <yaw/degrees>
+    aliases: [pd.cv.cy]
+    permission: paperdrugs.admincomand
+    permission-message: You do not have permission to use this command.
 permissions:
   paperdrugs.admincommand:
     description: Allows use of admin commands.

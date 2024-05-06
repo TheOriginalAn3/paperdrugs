@@ -2,6 +2,7 @@ package com.tieman114;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.tieman114.commands.ChangeVillagerYawCommand;
 import com.tieman114.commands.GetDrugsCommand;
 import com.tieman114.commands.GetWTraderSpawnEggCommand;
 import com.tieman114.commands.ListDecorativeAnvilsCommand;
@@ -40,10 +41,11 @@ public class PaperDrugs extends JavaPlugin {
     }
 
     void registerCommands() {
-        getCommand("getWTEgg").setExecutor(new GetWTraderSpawnEggCommand());
-        getCommand("getDrugs").setExecutor(new GetDrugsCommand());
-        getCommand("showDebugStatements").setExecutor(new ShowDebugStatementsCommand());
-        getCommand("listDecorativeAnvils").setExecutor(new ListDecorativeAnvilsCommand());
-        getCommand("spawncustomvillager").setExecutor(new SpawnCustomVillagerCommand());
+        getCommand("paperdrugs.getwtegg").setExecutor(new GetWTraderSpawnEggCommand());
+        getCommand("paperdrugs.getdrugs").setExecutor(new GetDrugsCommand());
+        getCommand("paperdrugs.showdebugstatements").setExecutor(new ShowDebugStatementsCommand());
+        getCommand("paperdrugs.listdecorativeanvils").setExecutor(new ListDecorativeAnvilsCommand());
+        getCommand("paperdrugs.spawncustomvillager").setExecutor(new SpawnCustomVillagerCommand());
+        getCommand("paperdrugs.changevillageryaw").setExecutor(new ChangeVillagerYawCommand());
     }
 }

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("deprecation")
 public class SpawnCustomVillagerCommand implements CommandExecutor {
-    @SuppressWarnings("deprecation")
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
