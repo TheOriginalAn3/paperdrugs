@@ -12,8 +12,20 @@ import org.bukkit.inventory.MerchantRecipe;
 
 import net.md_5.bungee.api.ChatColor;
 
+/**
+ * A command executor for removing a trade from a villager.
+ */
 public class RemoveTradeCommand implements CommandExecutor{
     
+    /**
+     * Executes the remove trade command.
+     * 
+     * @param sender the command sender
+     * @param command the command
+     * @param label the command label
+     * @param args the command arguments
+     * @return true if the command was executed successfully, false otherwise
+     */
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         
@@ -59,7 +71,7 @@ public class RemoveTradeCommand implements CommandExecutor{
         villager.setRecipes(trades);
 
         // Send a message to the player
-        Debugger.sendMessageToPlayer(player,  "Trade " + ChatColor.RED + "removed from villager: " + ChatColor.GRAY + tradeToRemove.getIngredients().toString() + " -> " + tradeToRemove.getResult().toString());
+        Debugger.sendMessageToPlayer(player,  "Trade " + ChatColor.RED + "removed from villager " + villager.getName() + ": "  + ChatColor.GRAY + tradeToRemove.getIngredients().toString() + " -> " + tradeToRemove.getResult().toString());
         return true;
     }
 }
