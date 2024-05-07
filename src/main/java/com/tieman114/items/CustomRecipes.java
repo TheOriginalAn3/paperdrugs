@@ -239,4 +239,61 @@ public class CustomRecipes {
                     "Cannot return value of ItemStack decorativeAnvil because decorativeAnvil is NULL");
     }
 
+    // Return a boolean value indicating whether the given material is a custom item
+    @SuppressWarnings("deprecation")
+    public static boolean isCustomItem(String material) {
+        material = material.toLowerCase().replace('_', ' ');
+        if (getChemicals().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return true;
+        }
+        if (getCocaine().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return true;
+        }
+        if (getCrystalMeth().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return true;
+        }
+        if (getDecorativeAnvil().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return true;
+        }
+        if (getLiquidCrystalMeth().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return true;
+        }
+        if (getMidnightMarks().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return true;
+        }
+        if (getWeed().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return true;
+        }
+        return false;
+    }
+
+    @SuppressWarnings("deprecation")
+    public static ItemStack getCustomItem(String material) {
+        material = material.toLowerCase().replace('_', ' ');
+        if (getChemicals().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return getChemicals();
+        }
+        if (getCocaine().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return getCocaine();
+        }
+        if (getCrystalMeth().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return getCrystalMeth();
+        }
+        if (getDecorativeAnvil().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return getDecorativeAnvil();
+        }
+        if (getLiquidCrystalMeth().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return getLiquidCrystalMeth();
+        }
+        if (getMidnightMarks().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return getMidnightMarks();
+        }
+        if (getWeed().getItemMeta().getDisplayName().toLowerCase().contains(material)) {
+            return getWeed();
+        }
+        return null;
+    }
+
+
+
 }
