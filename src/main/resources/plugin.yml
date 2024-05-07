@@ -1,5 +1,5 @@
 name: PaperDrugs
-version: 2.0.0
+version: 2.1.0
 main: com.tieman114.PaperDrugs
 description: A plugin adding drugs dor our private mc server
 author: TieMan114
@@ -40,6 +40,12 @@ commands:
     usage: /customvillager.changevillageryaw <yaw/degrees>
     aliases: [pd.cv.cy]
     permission: paperdrugs.admincomand
+    permission-message: You do not have permission to use this command.
+  paperdrugs.addtrade:
+    description: Adds a trade to the custom villager you're looking at.
+    usage: /paperdrugs.addtrade <item1> <item1Ammount> <costItem1> <costItem1Ammount> (<costItem2> <costItem2Ammount>)
+    aliases: [pd.at]
+    permission: paperdrugs.admincommand
     permission-message: You do not have permission to use this command.
 permissions:
   paperdrugs.admincommand:
