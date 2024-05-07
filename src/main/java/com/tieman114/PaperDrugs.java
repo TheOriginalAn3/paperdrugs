@@ -7,6 +7,7 @@ import com.tieman114.commands.ChangeVillagerYawCommand;
 import com.tieman114.commands.GetDrugsCommand;
 import com.tieman114.commands.GetWTraderSpawnEggCommand;
 import com.tieman114.commands.ListDecorativeAnvilsCommand;
+import com.tieman114.commands.RemoveTradeCommand;
 import com.tieman114.commands.ShowDebugStatementsCommand;
 import com.tieman114.commands.SpawnCustomVillagerCommand;
 import com.tieman114.fileManagers.AnvilLocationManager;
@@ -49,5 +50,6 @@ public class PaperDrugs extends JavaPlugin {
         getCommand("paperdrugs.spawncustomvillager").setExecutor(new SpawnCustomVillagerCommand());
         getCommand("paperdrugs.changevillageryaw").setExecutor(new ChangeVillagerYawCommand());
         getCommand("paperdrugs.addtrade").setExecutor(new AddTradeCommand());
+        getCommand("paperdrugs.removetrade").setExecutor(new RemoveTradeCommand());
     }
 }

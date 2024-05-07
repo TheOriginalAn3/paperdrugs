@@ -12,6 +12,8 @@ import org.bukkit.entity.Villager;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.MerchantRecipe;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class AddTradeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -28,7 +30,6 @@ public class AddTradeCommand implements CommandExecutor {
         if (player.getTargetEntity(10) instanceof Villager) {
             villager = (Villager) player.getTargetEntity(10);
         } else {
-            // Return a message to the player
             Debugger.sendMessageToPlayer(player, "You are not looking at a villager.");
             return false;
         }
@@ -81,7 +82,7 @@ public class AddTradeCommand implements CommandExecutor {
         villager.setRecipes(trades);
 
         // Return a message to the player
-        Debugger.sendMessageToPlayer(player, "Trade added to villager: " + newTrade.getIngredients().toString() + " -> " + newTrade.getResult().toString());
+        Debugger.sendMessageToPlayer(player, "Trade " + ChatColor.GREEN + "added to villager: " + ChatColor.GRAY +  newTrade.getIngredients().toString() + " -> " + newTrade.getResult().toString());
         return true;
     }
 

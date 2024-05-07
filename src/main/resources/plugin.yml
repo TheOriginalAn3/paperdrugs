@@ -47,6 +47,12 @@ commands:
     aliases: [pd.at]
     permission: paperdrugs.admincommand
     permission-message: You do not have permission to use this command.
+  paperdrugs.removetrade:
+    description: Removes a trade from the custom villager you're looking at.
+    usage: /paperdrugs.removetrade <tradeNumber>
+    aliases: [pd.rt]
+    permission: paperdrugs.admincommand
+    permission-message: You do not have permission to use this command.
 permissions:
   paperdrugs.admincommand:
     description: Allows use of admin commands.
