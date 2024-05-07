@@ -45,10 +45,10 @@ If you'd like to contribute or have an idea for a feature that should be impleme
 4. Be sure to follow the already existing file structure. If something dosn't fall under one of the existing directories, feel free to create your own.
 
 **Suggesting Features**
-1. Be as descriptive or not as you'd like but if your idea is not easy to understand, dont expect a 1 to 1 implementation.
-2. Add suggestions under [Features](#features) under **Ideas**
-3. Follow this files layout
-4. Beware that blocks also need custom items. Please add both the item and the block, (and the crafting recipe) to the speciefied fields. (Create one if it does not yet exist) 
+1. Check if a similar feature has already been suggested.
+2. Be as descriptive or not as you'd like but if your idea is not easy to understand, dont expect a 1 to 1 implementation.
+3. Add suggestions under a new issue with the label ```🏷️ improvement```
+4. Beware that blocks also need custom items. Please add both the item and the block, (and the crafting recipe) to the issues description.
 
 ****
 ## 📃License
