@@ -6,7 +6,7 @@
 
     <groupId>com.tieman114</groupId>
     <artifactId>paperdrugs</artifactId>
-    <version>2.0-RELEASE</version>
+    <version>2.1-Beta</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
