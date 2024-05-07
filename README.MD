@@ -83,7 +83,8 @@ No license. Use however you want, I dont care.
 - [X] **SpawnCustomVillager "name" "position" "trade1" "trade2"...** - spawns a custom villager with the speciefied trades.
 - [X] **ShowDebugStatements** - shows debug statements in the players in-game chat.
 - [X] **ListDecorativeAnvils** - lists all decorative anvil locations.
-- [X] **GetWTEgg** - gives the player a Wandering Trader Egg
+- [X] **GetWTEgg** - gives the player a Wandering Trader Egg.
 - [X] **ChangeVillagerYaw** - changes the nearest villagers yaw. (Usefull if you need to rotate a custom villager)
+- [X] **add/removeTrade** - adds/removes a trade from a villager.
 
 
